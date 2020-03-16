@@ -96,7 +96,7 @@ char* End_Time(float *hours_worked, float *start_time)
   end_hours = end_hours % 12;
 
   if (end_hours == 0 && *start_time != 0)
-    { end_hours += 12;}
+    {end_hours += 12;}
   if (end_minutes == 0)
   {
     snprintf(end_time, 10, "%d:00", end_hours);
