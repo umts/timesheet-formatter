@@ -165,7 +165,7 @@ float** gather_hours(int day_num, float* start_time, float* hours_worked, int* n
   return block_starting_times;
 }
 
-//month math
+//month day increments
 void increment_month_and_day(int* month_num, int* day_num)
 {
   //30 days has september, april, june, and november...
@@ -206,14 +206,14 @@ void increment_month_and_day(int* month_num, int* day_num)
 //frees memory
 void memory_cleanup(FILE* output, int* month_num, int* day_num, float** block_starting_times, int* num_of_blocks)
 {
-  fclose(output); //Test line
-  free(month_num); //Test line
-  free(day_num); //Test line
+  fclose(output);
+  free(month_num);
+  free(day_num); 
   
   for(int i = 0; i < *num_of_blocks; i++)
   {
     free(block_starting_times[i]);
   }
 
-  free(block_starting_times); //Test line
+  free(block_starting_times);
 }
