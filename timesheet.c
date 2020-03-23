@@ -53,7 +53,7 @@ while(day_of_week_num < 7)
   {
     int block_output_tracker = 0;
     block_starting_times = gather_hours(day_of_week_num, &start_time, &hours_worked, &num_of_blocks, &total_hours_worked);
-    output_month_day_hours(output, abbreviated_days[1], month_num, day_num, &total_hours_worked); 
+    output_month_day_hours(output, abbreviated_days[day_of_week_num], month_num, day_num, &total_hours_worked); 
 
     while(block_output_tracker < num_of_blocks)
     {
