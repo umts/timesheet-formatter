@@ -23,6 +23,14 @@ Type the path to the output to run the program.
 
 After running the program generates a file name TimeSheet.txt, this is where you copy the inputed hours from.
 
+## Usage
+
+- The first thing it will ask you is the month. Input the month number and not the name.
+- Now enter the date for sunday of the week, and just the day of the month nothing else.
+- Now you can go on with entering your time blocks starting Sunday until Saturday.
+- It asks you for hours given to respective timeblocks in order.
+- Once you're done, the program will quit and you can see the formatted timesheet in a textfile!
+
 
 
 
