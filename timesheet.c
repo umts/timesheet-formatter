@@ -27,7 +27,8 @@ int main()
   //variables
   float start_time = 0.0;
   float hours_worked = 0.0;
-  float total_hours_worked = 0;
+  float total_hours_worked = 0.0;
+  float weekly_hours = 0.0;
   int num_of_blocks = 0;
   float** block_starting_times;
   
@@ -53,6 +54,7 @@ while(day_of_week_num < 7)
   {
     int block_output_tracker = 0;
     block_starting_times = gather_hours(day_of_week_num, &start_time, &hours_worked, &num_of_blocks, &total_hours_worked);
+    weekly_hours += total_hours_worked;
     output_month_day_hours(output, abbreviated_days[day_of_week_num], month_num, day_num, &total_hours_worked); 
 
     while(block_output_tracker < num_of_blocks)
@@ -70,6 +72,7 @@ while(day_of_week_num < 7)
     day_of_week_num += 1;
   }
 
+  fprintf(output,"\n Total hours: %.2f", weekly_hours);
   memory_cleanup(output, month_num, day_num, block_starting_times, &num_of_blocks);
 }
 
